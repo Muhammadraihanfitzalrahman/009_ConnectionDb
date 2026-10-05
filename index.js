@@ -15,9 +15,9 @@ app.use(
 const pool = new Pool({
   user: process.env.DB_USER || "postgres",
   host: process.env.DB_HOST || "localhost",
-  database: "mahasiswa",
-  password: "123456789",
-  port: 5432,
+  database: process.env.DB_NAME || "mahasiswa",
+  password: process.env.DB_PASSWORD,
+  port: Number(process.env.DB_PORT) || 5432,
 });
 
 app.get("/", (req, res, next) => {
