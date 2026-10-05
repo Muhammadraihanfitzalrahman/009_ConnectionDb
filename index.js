@@ -13,8 +13,8 @@ app.use(
 );
 
 const pool = new Pool({
-  user: "postgres",
-  host: "localhost",
+  user: process.env.DB_USER || "postgres",
+  host: process.env.DB_HOST || "localhost",
   database: "mahasiswa",
   password: "123456789",
   port: 5432,
