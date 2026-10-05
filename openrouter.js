@@ -40,7 +40,7 @@ const validateBody = (schema) => (req, res, next) => {
         return res.status(400).json({
             success: false,
             error: 'Validasi gagal',
-            detail: result.error.errors.map((err) => ({
+            detail: result.error.issues.map((err) => ({
                 field: err.path.join('.'),
                 message: err.message
             }))
