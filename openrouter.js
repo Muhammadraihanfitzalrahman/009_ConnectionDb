@@ -17,7 +17,7 @@ if (!OPENROUTER_API_KEY) {
 
 const chatRequestSchema = z.object({
     prompt: z
-        .string({ required_error: 'Field Prompt wajib diisi' })
+        .string({ error: 'Field Prompt wajib diisi' })
         .trim()
         .min(1, 'Prompt tidak boleh kosong')
         .max(4000, 'Prompt maksimal 4000 karakter'),
