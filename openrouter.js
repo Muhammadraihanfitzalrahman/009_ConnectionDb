@@ -105,5 +105,5 @@ app.post('/api/chat', validateBody(chatRequestSchema), async (req, res) => {
 });
 
 app.listen(PORT, () => {
-    console.log(`Server berjalan di port http://localhost${PORT}`);
+    console.log(`Server berjalan di http://localhost:${PORT}`);
 });
